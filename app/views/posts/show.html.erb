@@ -1,0 +1,18 @@
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @post.body %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @post.user %>
+</p>
+
+<%= link_to fa_icon('edit'), edit_post_path(@post, locale: I18n.locale) %> |
+<%= link_to fa_icon('arrow-circle-left'), posts_path(locale: I18n.locale) %>
