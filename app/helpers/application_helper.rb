@@ -17,8 +17,12 @@ module ApplicationHelper
       },
 
       {
-        url: about_path(params[:locale]),
+        url: static_pages_about_path(params[:locale]),
         title: t('.about')
+      },
+      {
+        url: posts_path(params[:locale]),
+        title: t('.posts')
       },
 
     ]

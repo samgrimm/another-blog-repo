@@ -19,7 +19,7 @@ class PostsController < ApplicationController
 
   # POST /posts
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.new(post_params)
 
     if @post.save
       redirect_to post_path(@post, locale:I18n.locale), notice: t(".post_succes")
@@ -38,7 +38,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   def destroy
     @post.destroy
-    redirect_to posts_url(locale: I18n.locale), notice: notice: t(".post_destroyed")
+    redirect_to posts_path(locale: I18n.locale), notice: t(".post_destroyed")
   end
   private
     # Use callbacks to share common setup or constraints between actions.
