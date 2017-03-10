@@ -64,7 +64,9 @@ gem 'gritter', '~>1.2'
 gem 'rails-i18n', '~> 5.0'
 gem 'i18n-tasks', '~>0.9.8'
 gem 'rails_12factor'
-gem 'rails-assets-tether'
+source "https://rails-assets.org" do
+  gem "rails-assets-tether"
+end
 gem 'devise', '~>4.2'
 
 ruby "2.4.0"
